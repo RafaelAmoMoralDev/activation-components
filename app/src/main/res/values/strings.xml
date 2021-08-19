@@ -1,0 +1,42 @@
+<resources>
+
+    <string name="app_name">Activation Components</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_activities_menu">ActivitiesMenuActivity</string>
+    <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_pending">PendingActivity</string>
+    <string name="title_activity_services_menu">ServicesMenuActivity</string>
+    <string name="title_activity_timer">TimerActivity</string>
+    <string name="title_activity_receivers_menu">ReceiversMenuActivity</string>
+    <string name="title_activity_providers">ProvidersActivity</string>
+
+    <string name="activity_main_btn_activities">Activities</string>
+    <string name="activity_main_btn_services">Services</string>
+    <string name="activity_main_btn_receivers">Receivers</string>
+    <string name="activity_main_btn_providers">Providers</string>
+
+    <string name="activity_activities_menu_btn_explicit_intent">Explicit intent</string>
+    <string name="activity_activities_menu_btn_implicit_intent">Implicit intent</string>
+    <string name="activity_activities_menu_intent_error">There is no activity that match to this type of Intent</string>
+    <string name="activity_activities_menu_btn_chooser_intent">Chooser intent</string>
+    <string name="activity_activities_menu_btn_pending_intent">Pending intent</string>
+    <string name="activity_activities_menu_btn_chooser_intent_title">Choose…</string>
+
+    <string name="activity_services_menu_btn_single_operation_service">Unique operation</string>
+    <string name="activity_services_menu_btn_linked_service">Linked</string>
+    <string name="activity_services_menu_btn_scheduled_service">Scheduled</string>
+    <string name="activity_services_service_started">Service started</string>
+    <string name="activity_services_service_destroyed">Service destroyed</string>
+    <string name="activity_services_scheduled_service_started">Scheduled service</string>
+    <string name="activity_services_scheduled_service_destroyed">Scheduled service destroyed</string>
+
+    <string name="activity_timer_btn_start">Start</string>
+    <string name="activity_timer_btn_end">End</string>
+
+    <string name="activity_receivers_menu_btn_send_broadcast">Send broadcast</string>
+
+    <string name="activity_providers_btn_contacts">Get contacts</string>
+    <string name="activity_providers_grant_permissions">You need to grant permissions</string>
+
+</resources>

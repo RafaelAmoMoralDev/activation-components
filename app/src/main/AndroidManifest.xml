@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rafaamo.components_activation">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <!-- Para leer más sobre de las queries https://developer.android.com/guide/topics/manifest/queries-element -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ComponentsActivation">
+        <activity
+            android:name="com.rafaamo.components_activation.MainActivity"
+            android:label="@string/title_activity_main">
+            <intent-filter>
+                <!-- Obligatoriamente un intent filter debe de tener el elemento action y opcionalmete
+                 los atributos category o data aunque en el caso de la actividad principal el elemento
+                 category de tipo LAUNCHER es también requerido -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.rafaamo.components_activation.activities.ActivitiesMenuActivity"
+            android:label="@string/title_activity_activities_menu" />
+        <activity
+            android:name="com.rafaamo.components_activation.activities.FirstActivity"
+            android:label="@string/title_activity_second"
+            android:roundIcon="@drawable/ic_launcher_foreground">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rafaamo.components_activation.activities.SecondActivity"
+            android:label="@string/title_activity_third"
+            android:roundIcon="@drawable/ic_launcher_foreground_2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rafaamo.components_activation.activities.PendingActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_pending"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
+
+        <activity
+            android:name="com.rafaamo.components_activation.services.ServicesMenuActivity"
+            android:label="@string/title_activity_services_menu" />
+        <service
+            android:name="com.rafaamo.components_activation.services.SingleOperationService"
+            android:exported="false"/>
+        <activity
+            android:name="com.rafaamo.components_activation.services.linked.TimerActivity"
+            android:label="@string/title_activity_timer" />
+        <service
+            android:name="com.rafaamo.components_activation.services.linked.TimerService"
+            android:exported="false" />
+        <service android:name="com.rafaamo.components_activation.services.ScheduledService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.rafaamo.components_activation.receivers.ReceiversMenuActivity"
+            android:label="@string/title_activity_receivers_menu" />
+        <receiver android:name="com.rafaamo.components_activation.receivers.MyReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.rafaamo.action.MY_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.rafaamo.components_activation.providers.ProvidersActivity"
+            android:label="@string/title_activity_providers" />
+    </application>
+</manifest>
